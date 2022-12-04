@@ -3,3 +3,31 @@
     width: 90%;
     height: 45em;
 }
+
+.close_button {
+    margin: 0px 0px 10px 10px;
+    background-color: #cc3030;
+    color: #ffffff;
+    float: right;
+}
+
+/* mõned detailid OpenGPT poolt */
+.modal {
+    padding: 20px;
+    background-color: #dddddd;
+    border-radius: 20px;
+    border: 20px solid #dddddd;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 80%;
+    transform: translate(-50%, 0%);
+    height: fit-content;
+    min-height: 70%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.modal.show {
+    opacity: 1;
+}

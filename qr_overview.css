@@ -31,3 +31,79 @@
 .modal.show {
     opacity: 1;
 }
+
+/* animatsioon */
+#animation_box {
+    z-index: 0;
+    width: 600px;
+    height: 150px;
+    background-color: #bbbbbb;
+    margin: auto;
+    position: relative;
+}
+
+.center_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#animation_server {
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    height: 90%;
+    top: 5%;
+    left: 5px;
+    background-color: #222222;
+    color: #eeeeee;
+    position: absolute;
+    
+}
+
+#animation_page {
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    height: 90%;
+    top: 5px;
+    left: 495px;
+    background-color: #50dd50;
+}
+
+#animation_browser {
+    z-index: 2;
+    position: absolute;
+    width: 20px;
+    height: 90%;
+    top: 5%;
+    left: 400px;
+    background-color: #881010;
+    color: #eeeeee;
+}
+
+#animation_browser_inner {
+    transform: rotate(90deg);
+}
+
+#animation_data {
+    z-index: 1;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    left: 500px;
+    transform: translate(0, -50%);
+    background-color: #cccc50;
+    transition: left 1s;
+}
+
+#animation_data.important {
+    background-color: #ffaa50;
+}
+
+#animation_data.destroy {
+    transition: opacity 0.5s linear, transform 0.7s;
+    transform: translate(0, -100%) scale(10%);
+    opacity: 0;
+}

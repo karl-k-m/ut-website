@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+*{
+	padding:0;
+	margin: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header{
+    padding: 5px;
+    text-align: center;
+    background-image: url("header1.jpg");
+    /*Pildi source: https://www.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_9728603.htm*/
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+ }
+.font1{
+    color:black;
+    font-size: 20px;
+}
+
+.font2{
+    color:#3e3846;
+}
+body{
+    background-image: url("bgimage.jpg");
+    /*Pildi source: https://www.pexels.com/photo/sunlight-on-floor-62693/*/
+
+}
+
+
+h1{
+    font-size: 40px;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+
+}
+ul li{
+    float: left;
+    width: 200px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0.8;
+    font-size: 16px;
+    background-color: skyblue;
+    color: black;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+ul li ax:link, ul li a:visited {
+    color: black; 
+}
+
+.back{
+    overflow: auto;
+ background-color: lightgray;
+}
+.hoidjalink{ 
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+}

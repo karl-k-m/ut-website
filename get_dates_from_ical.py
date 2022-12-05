@@ -7,7 +7,7 @@ import datetime
 with open("ois2-calendar-et.ics", encoding='utf8') as f:
     cal = icalendar.Calendar.from_ical(f.read())
 
-# Get all events (not used)
+# Get all events
 events = cal.walk('vevent')
 with open('dates.txt', 'w') as f:
     dates_to_add = ''

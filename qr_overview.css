@@ -25,10 +25,12 @@
     height: fit-content;
     min-height: 70%;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, visibility 0.5s;
+    visibility: hidden;
 }
 
 .modal.show {
+    visibility: visible;
     opacity: 1;
 }
 

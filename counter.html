@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="utf-8">
+    <title>Countdown</title>
+</head>
+<body>
+
+<h1>Aeg järgmise kontrolltööni</h1>
+
+<p id="countdown"></p>
+<p id="to_study"></p>
+
+<script>
+
+    dates = ['2022-10-06', '2022-10-13', '2022-10-17', '2022-10-24', '2022-10-24', '2022-10-24', '2022-11-03', '2022-11-03', '2022-11-17', '2022-11-21', 
+'2022-11-21', '2022-11-21', '2022-11-29', '2022-12-08', '2022-12-12', '2022-12-19', '2022-12-19', '2023-01-02']
+
+
+    // Get first element in dates array
+    var countDownDate = new Date(dates[0]).getTime();
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Cycle through dates array until a date that is not before today is found
+    while (now > countDownDate) {
+        dates.shift()
+        countDownDate = new Date(dates[0]).getTime();
+    }
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for weeks and days
+    var weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
+    var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24) + 1);
+    
+    // Display the time in weeks and days
+    document.getElementById("countdown").innerHTML = "Järgmise kontrolltööni on jäänud " + weeks + " nädalat ja " + days + " päeva!";
+
+    // If weeks at 0, display only days
+    if (weeks==0 && days != 0){
+        document.getElementById("countdown").innerHTML = "Järgmise kontrolltööni on jäänud " + days + " päeva!"
+    }
+
+    // If the count down is over, display text to say that the test is today
+    if (weeks == 0 && days == 0) {
+        document.getElementById("countdown").innerHTML = "Täna on kontrolltöö!";
+    }
+
+    // If countdown under 7 days, display text to tell the user to study
+    if (weeks == 0 && days < 7) {
+        document.getElementById("to_study").innerHTML = "Tuleb õppima hakata!"
+    }
+</script>
+
+</body>
+</html>

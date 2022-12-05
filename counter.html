@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="et">
 <head>
+    <meta charset="utf-8">
     <title>Countdown</title>
 </head>
 <body>
@@ -8,6 +9,7 @@
 <h1>Aeg järgmise kontrolltööni</h1>
 
 <p id="countdown"></p>
+<p id="to_study"></p>
 
 <script>
 
@@ -45,6 +47,11 @@
     // If the count down is over, display text to say that the test is today
     if (weeks == 0 && days == 0) {
         document.getElementById("countdown").innerHTML = "Täna on kontrolltöö!";
+    }
+
+    // If countdown under 7 days, display text to tell the user to study
+    if (weeks == 0 && days < 7) {
+        document.getElementById("to_study").innerHTML = "Tuleb õppima hakata!"
     }
 </script>
 

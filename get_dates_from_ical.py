@@ -1,3 +1,5 @@
+# Tool to generate a list of dates from an ical file. The dates are to be added to the javascript file manually at the start of each semester.
+
 import icalendar
 import datetime
 
@@ -5,7 +7,7 @@ import datetime
 with open("ois2-calendar-et.ics", encoding='utf8') as f:
     cal = icalendar.Calendar.from_ical(f.read())
 
-# Get all events
+# Get all events (not used)
 events = cal.walk('vevent')
 with open('dates.txt', 'w') as f:
     dates_to_add = ''

@@ -2,14 +2,33 @@
 <html lang="et">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="p6hi.css">
     <title>Countdown</title>
 </head>
 <body>
+    <header>
+        <div class="header">
+            <button onclick="history.back()">&larr;</button>
+            <h1>Üliõpilase koduleht</h1>
+        </div>
+    </header>
+    <ul class="menu">
+        <li><a href="pealeht.html">Pealeht</a></li>
+        <li><a href="qr_overview.html">Kärgede vaatamine</a></li>
+        <li><a href="kontrolltööd.html">Kontrolltööde ajakava</a></li>
+    </ul>
+    <br>
+    <br>
 
 <h1>Aeg järgmise kontrolltööni</h1>
+<br>
+<br>
 
-<p id="countdown"></p>
-<p id="to_study"></p>
+<p class = "ktd" id="countdown"></p>
+<p class = "ktd" id="to_study"></p>
+<div class="footer">
+    <p>Üliõpilase koduleht 2022</p>
+</div>
 
 <script src="kontrolltööd.js"></script>
 
